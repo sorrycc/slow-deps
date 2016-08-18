@@ -28,7 +28,7 @@ var oldCache
 
 function cleanup () {
   if (oldCache) {
-    return exec(shellEscape(['npm', 'config', 'set', 'cache', oldCache]))
+    return exec(shellEscape(['tnpm', 'config', 'set', 'cache', oldCache]))
   }
 }
 
@@ -55,9 +55,9 @@ function doNpmInstalls (deps) {
     promise = promise.then(function () {
       return mkdir(dep)
     }).then(function (dir) {
-      return exec(shellEscape([ 'npm', 'config', 'set', 'cache', path.join(dir, '.cache') ])).then(function () {
+      return exec(shellEscape([ 'tnpm', 'config', 'set', 'cache', path.join(dir, '.cache') ])).then(function () {
         var start = now()
-        return exec(shellEscape([ 'npm', 'install', dep + '@' + version ]), {
+        return exec(shellEscape([ 'tnpm', 'install', dep + '@' + version ]), {
           cwd: dir,
           env: process.env
         }).then(function () {
@@ -109,7 +109,7 @@ function report (times) {
 
 Promise.resolve().then(function () {
   // remember the user's original `cache` so we can reset it
-  return exec('npm config get cache').then(function (cache) {
+  return exec('tnpm config get cache').then(function (cache) {
     oldCache = cache.stdout.replace(/\n$/, '')
   })
 }).then(function () {

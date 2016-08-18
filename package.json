@@ -1,10 +1,10 @@
 {
-  "name": "slow-deps",
+  "name": "slow-deps-tnpm",
   "version": "1.0.4",
   "description": "Measure which dependencies in a project are slowest to install",
   "main": "index.js",
   "bin": {
-    "slow-deps": "index.js"
+    "slow-deps-tnpm": "index.js"
   },
   "scripts": {
     "test": "standard"
