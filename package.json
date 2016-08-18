@@ -39,10 +39,10 @@
   "files": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nolanlawson/slow-deps.git"
+    "url": "git+https://github.com/sorrycc/slow-deps.git"
   },
   "bugs": {
-    "url": "https://github.com/nolanlawson/slow-deps/issues"
+    "url": "https://github.com/sorrycc/slow-deps/issues"
   },
-  "homepage": "https://github.com/nolanlawson/slow-deps#readme"
+  "homepage": "https://github.com/sorrycc/slow-deps#readme"
 }
